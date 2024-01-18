@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border 테두리 설정하는 속성</title>
+
+    <link rel="stylesheet" href="/reset.css">
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+
+            /* 가장 많이쓰는 형태 */
+            /* 테두리의 스타일은 거의 solid만 사용함 */
+            border: 1px solid black;
+            /* 
+               border-width(테두리의 굵기): 1px;
+               border-style(테두리의 스타일): solid(직선, 실선);
+               border-color(테두리의 색깔): black;
+               이 세 가지 속성을 합친 것이다.
+             */
+        }
+    </style>
+</head>
+<body>
+    <!-- div.box : box라는 클래스를 가진 div라는 뜻(자동완성) -->
+    <div class="box"></div>
+</body>
+</html>
