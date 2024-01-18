@@ -22,11 +22,69 @@
                border-color(테두리의 색깔): black;
                이 세 가지 속성을 합친 것이다.
              */
+
+             margin: 16px;
+        }
+
+        .round-box {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            border: 1px solid black;
+
+            /* border-radius : 테두리를 둥글게 만들어주는 속성 */
+            /* 수치는 2~8 정도가 무난하다 */
+            /* 너무 높게 수치를 주면 디자인이 과하게 귀여워질 수 있다 */
+            border-radius: 8px;
+
+            margin: 16px;
+        }
+
+        .one-side-round {
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            border-radius: 4px;
+            border-bottom-right-radius: 100px;
+            border: 1px solid green;
+
+            /* 
+              1개 속성을 적을때
+              border-radius: 4px; 
+            */
+
+            /* 
+              4개 속성을 적을때는 왼쪽 위부터 시계방향 적용
+              border-radius: 4px 4px 4px 4px;
+              border-radius: 4px 24px 4px 24px;
+            */
+
+            /* 
+              2개 속성은 적을때는 속성이 번갈아 들어간다.
+              border-radius: 4px 4px;
+              border-radius: 4px 24px;
+            */
+
+            /*
+               4개 속성을 따로따로 적을때
+               border-top-left-radius: 4px;
+               border-top-right-radius: 4px;
+               border-bottom-left-radius: 4px;
+               border-bottom-right-radius: 4px; 
+            */
+
+            margin: 24px;
         }
     </style>
 </head>
 <body>
     <!-- div.box : box라는 클래스를 가진 div라는 뜻(자동완성) -->
     <div class="box"></div>
+
+    <!-- div.round-box : round-box라는 클래스를 가진 div라는 뜻(자동완성) -->
+    <div class="round-box"></div>
+
+    <!-- div.one-side-round :  one-side-round라는 클래스를 가진 div라는 뜻(자동완성)-->
+    <div class="one-side-round"></div>
 </body>
 </html>
