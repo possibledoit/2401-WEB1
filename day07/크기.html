@@ -44,6 +44,20 @@
             height: 56.25vw;
         }
 
+        .em-75per {
+            font-size: 0.75em;
+        }
+
+        .em-150per {
+            font-size: 1.5em;
+        }
+
+        /* 일반적으로는 사용하지는 않지만 가능한 경우라서 사용하는 경우도 있다. */
+        .inner-box-em {
+            /* 16px * 10em = 160 */
+            height: 10em;
+            background-color: blue;
+        }
     </style>
 </head>
 <body>
@@ -112,8 +126,59 @@
     <!-- 
          위 같은 설정은 일반적이지는 않으나 특정상황에서 굉장히 유용하게 사용할 수 있는데
          유튜브 동영상 넣을 때 굉장히 유용하다.
-     -->
+    -->
      <iframe class="my-video" src="https://www.youtube.com/embed/yGGHMG_7fgg" title="[洋楽playlist] 自己肯定感を上げるポジティブ洋楽プレイリスト - Good Month - Morning Routine" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
      
+
+    <!-- em, rem -->
+    <!-- 폰트 크기를 설정하는 값이다. -->
+    <!-- 기본 html 폰트 크기는 16px 기준으로 한다.-->
+    <!-- em 이라는 단위는 폰트 사이즈를 비율로 상속받는 태그이다. -->
+
+    <div>
+        <!-- 기본 html 폰트 크기 16px -->
+        안녕하세요
+
+        <!-- 16px * 0.75px = 12px -->
+        <p class="em-75per">
+            안녕한가요?
+        </p>
+        <!-- 16px * 1.5px = 24px -->
+        <div class="em-150per">
+            안녕합니다
+        <!-- 16px * 1.5px * 1.5px = 36px  -->
+        <p class="em-150per">
+            안녕하다고요
+        </p>
+    </div> 
+</div>
+
+<!-- rem(root em) : html 기본 폰트 사이즈를 불러온다. -->
+<!-- font-size : 1rem 은 16 px를 뜻한다. -->
+<!-- em 단위를 중첩해서 사용하다보면 기본 사이즈로 돌아가기가 어렵다. -->
+
+<!-- ex -->
+<!-- em을 계속 중첩하다보니깐 폰트 사이가 13.77px이 되어버렸다. -->
+<!-- 이때 몇을 곱해야 다시 원점인 16으로 돌아갈까...? -->
+<!-- 이런 계산이 너무 번거롭기때문에 원점으로 돌아갈 수 있는 rem 단위를 지원한다. -->
+<!-- 1rem을 쓰면 원점인 16px로 계산한다. -->
+
+<!-- 그냥 16px 사용하면 되는거 아닌가요? -->
+<!-- html 자체의 폰트 사이즈를 변경한 상황이면 16px이 아닐 수도 있기 때문에 -->
+<!-- em 단위를 초기화한다는 개념이면 rem을 사용하는게 더 맞는 방법이다.-->
+
+<!-- height : 10em으로 설정한 경우 -->
+    <div class="font-size: 24px">
+     <div class="inner-box-em">
+        가능하다.
+   </div>
+</div>
+
+<!-- 결론 -->
+<!-- 고정값 쓰고 싶으면 px -->
+<!-- 가변값 % -->
+<!-- viewport 기준 영향 vw, vh-->
+<!-- 폰트 기준 크기 em, rem -->
+
 </body>
 </html>
