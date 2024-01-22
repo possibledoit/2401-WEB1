@@ -18,6 +18,10 @@
         /* 강력한 부가기능들이 많기 때문에 익숙해지면 정말 편하다. */
         .container {
             display: flex;
+            padding: 12px;
+            background-color: pink;
+
+            margin-bottom: 8px;
         }
         
         .red {
@@ -27,11 +31,47 @@
         .green {
             background-color: green;
         }
+
+        .test1 {
+
+            flex-direction: column;
+            height: 500px;
+
+            /* 흐름 방향 정렬 */
+            justify-content: spa;
+            /* flex-start : 흐름 시작쪽으로(기본값) */
+            
+            /* center : 흐름 중앙 */
+            /* flex-end : 흐름 끝쪽으로 */
+            /* space-between :  
+               첫번째 개체와 마지막 개체를 양 끝에 붙이고
+               나머지 개체는 동일한 여백으로 배치
+               ex) 부모 가로가 1000일때, 100짜리 박스가 4개 있다.
+                   (부모가로-컨텐츠총가로)/여백갯수 여백은 각 200
+            */
+            
+            /* space-around : 모든 개체 양쪽에 동일하게 나눠주는 방식 (잘 사용하지는 않음)*/
+            /* space-evenly : 모든 여백을 동일한 크기로 설정 (잘 사용하지는 않음)*/
+           
+            /* 흐름 수직방향 정렬 */
+            align-items: center;
+            /* flex-start(기본값) */
+            
+            /* center : 흐름 중앙 */
+            /* flex-end : 흐름 끝쪽으로*/
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="red box"></div>
+        <div class="green box"></div>
+    </div>
+    
+    <div class="container test1"> 
+        <div class="red box"></div>
+        <div class="green box"></div>
+        <div class="red box"></div> 
         <div class="green box"></div>
     </div>
     <!-- div.container>div.red.box+div.green.box -->
