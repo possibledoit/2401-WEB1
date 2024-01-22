@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+
+    <link rel="stylesheet" href="/reset.css">
+
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+
+        /* float보다 더 발전된 형태의 배치 속성입니다. */
+        /* 자식 요소들을 일렬로 정렬해주는 속성 */
+        /* 강력한 부가기능들이 많기 때문에 익숙해지면 정말 편하다. */
+        .container {
+            display: flex;
+        }
+        
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="red box"></div>
+        <div class="green box"></div>
+    </div>
+    <!-- div.container>div.red.box+div.green.box -->
+</body>
+</html>
