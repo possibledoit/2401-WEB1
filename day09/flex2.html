@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+
+    <link rel="stylesheet" href="/reset.css">
+
+    <style>
+        .flex-box {
+            display: flex;
+        }
+
+        .box100 {
+            width: 100%;
+            height: 100px;
+
+            background-color: red;
+        }
+
+        .box50 {
+            width: 50%;
+            height: 100px;
+
+            background-color: pink;
+        }
+        
+        .box10 {
+            width: 10%;
+            height: 100px;
+
+            background-color: coral;
+        }
+
+        .flex-box2 {
+            display: flex;
+            /* gap : 컨텐츠 사이사이에 있는 여백 */
+            gap: 12px;
+            width: 1200px;
+            background-color: black;
+        }
+
+        /* flex는 자식요소들의 크기를 유연하게 설정 */
+        /* 
+           자식이 커서 부모를 넘칠 때
+           비율에 맞게 자동으로 줄여준다.
+        */
+
+        .float-box {
+            background-color: black;
+            width: 1200px;
+            overflow: hidden;
+        }
+
+        .float-5div {
+            /* (1200px-(12*4))/5 = 230.4px */
+            width: 230.4px;
+            height: 100px;
+            margin-right: 12px;
+            background-color: green;
+            float: left;
+        }
+
+        .no-margin {
+            margin: 0;
+        }
+
+        .flex-box-wrap {
+            display: flex;
+            width: 1216px;
+
+            gap: 8px;
+
+            background-color: #999;
+
+            /* 넘치는 컨텐츠 줄이는 대신에 줄바꿈하기 */
+            flex-wrap: wrap;
+        }
+
+        .product {
+            /* 
+               이렇게 고정값으로 작성하게 되면
+               부모컨텐츠 크기가 달라졌을때
+               망가지기 쉽다. 
+            */
+            /* ((1216px - (8px * (3-1)))/3) = 400px */
+            width: 400px;
+
+            /* 계산식을 안다면 다음과 같이 사용하는게 좋습니다. */
+            width: clac((100% - (8px * (3- 1))) / 3); /* = 400px */
+            height: 100px;
+            background-color: pink;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="flex-box">
+        <div class="box100"></div>
+        <div class="box50"></div>
+        <div class="box10"></div>
+    </div>
+
+    <div class="flex-box2">
+        <div class="box100"></div>
+        <div class="box100"></div>
+        <div class="box100"></div>
+        <div class="box100"></div>
+        <div class="box100"></div>
+    </div>
+
+    <div class="float-box">
+        <div class="float-5div"></div>
+        <div class="float-5div"></div>
+        <div class="float-5div"></div>
+        <div class="float-5div"></div>
+        <div class="float-5div no-margin"></div>
+    </div>
+
+    <div class="flex-box-wrap">
+        <div class="product">1</div>
+        <div class="product">2</div>
+        <div class="product">3</div>
+        <div class="product">4</div>
+        <div class="product">5</div>
+        <div class="product">6</div>
+    </div>
+</body>
+</html>
