@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+
+    <link rel="stylesheet" href="/reset.css">
+
+    <style>
+        .container {
+            display: flex;
+            width: 800px;
+
+        }
+
+        .meta-container {
+            width: 100%
+
+            /* 
+            flex-grow 속성은 컨텐츠의 크기를 늘려 부모 컨텐츠의 빈칸을 채워주는 속성.
+
+            여러 개체에 flex-grow 속성이 들어가면
+            비율로 크기를 나눠 가진다.
+
+            A: flex-grow: 1;
+            b: flex-grow: 3; 일때
+            A는 25%, b는 75%를 차지하게 된다.
+
+            flex-grow를 안가진 다른 컨텐츠가 있을때는
+            해당 컨텐츠를 제외한 나머지 영역을 나눠가진다.
+
+            flex-grow: 1; 
+            */
+        }
+        
+        .user-thumb {
+            width: 80px;
+            height: 80px;
+            background-color: gray;
+            border-radius: 50%;
+
+            flex-shrink: 0;
+            /* shrink : 수축 */
+            /* 1은 그렇다 , 0은 안한다 */
+            /* flex-shrink: 0 = 수축 안한다 */
+            /* 위 속성으로 컨텐츠가 수축하는 것을 막을 수 있다. */
+
+            /* grow와 동일하게 비율로 계산해서 수축하게 할 수 있다. */
+        }
+
+        .user-name {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .user-subs-count {
+            font-size: 18px;
+        }
+
+        .subs-button {
+            border: none;
+            background-color: red;
+            color: white;
+            font-weight: white;
+
+            padding: 8px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        flex의 자식요소들은 기본적으로 넘칠때 수축하는 성질이 있다.
+        즉, 특정 속성을 주면 수축하지 않게끔 할 수 있다.
+    -->
+
+    <!-- display: flex;라는 속성도 있지만, -->
+    <!-- flex : 이런 속성도 있습니다. -->
+    <!-- display: flex; 속성은 부모에게 적용하는 속성이고 -->
+    <!-- flex : 속성은 자식에게 직접 적용하는 속성입니다. -->
+
+   <div class="container">
+            <div class="user-thumb">
+        </div>
+        <div class="meta-container">
+            <h3 class="user-name">컨텐츠 크리에이터</h3>
+            <p class="user-subs-count">구독자 1,999명<p>
+        </div>
+        <button class="subs-button">구독하기</button>
+    </div>
+</body>
+</html>
