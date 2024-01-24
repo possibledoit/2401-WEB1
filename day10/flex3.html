@@ -89,5 +89,33 @@
         </div>
         <button class="subs-button">구독하기</button>
     </div>
+
+    <!-- flex 관련 속성 -->
+    <!-- shrink, grow, basis 이 세 가지 속성이 있다. -->
+
+    <!-- shrink : 수축 -->
+    <!-- grow : 늘어남 -->
+    <!-- basis : 기본 크기 지정 -->
+    <!-- 그러면 flex-basis랑 width의 차이가 뭔가? -->
+
+    <!-- 
+        case1, flex-direction(정렬 축 방향)이 row(행)이 아니라 column(열)일때
+        주로 flex-basis를 사용할 수 있다.
+    -->
+
+    <!-- 
+        case2, width는 무조건 고정, flex-basis는 최솟값
+        근데, min-width라는 속성 또한 최솟값
+     -->
+
+     <!-- 
+        flex: 2 1 50%; 이런 식으로도 작성할 수 있다.
+
+        flex-grow: 2;
+        flex-shrink: 1;
+        flex-basis: 50%;
+        와 같다.
+      -->
+      
 </body>
 </html>
