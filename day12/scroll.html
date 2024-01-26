@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll</title>
+
+    <!-- <link rel="stylesheet" href="/reset.css"> -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .scroll-box {
+            /* 
+               이런 식으로 overflow 자체에 scroll 속성을 넣으면
+               x,y 양방향 scroll이 생기는 문제가 있다. 
+            */
+            overflow: scroll;
+
+            width: 200px;
+            height: 200px;
+        }
+
+        .scroll-y-box {
+            width: 200px;
+            height: 200px;
+            /* 
+               overflow-y: auto;는 글자 수가 많으면 생기고 글자 수가 많지 않으면 안 생긴다.
+               body 부분도 overflow-y가 작동하고 있어서 딱히 지정하지 않아도 된다.
+            */
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-box">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, dignissimos dicta? Sequi labore distinctio illum aliquid rerum. Eum blanditiis temporibus, magni dolorem nisi odio enim, nemo saepe voluptatibus similique suscipit?
+    </div>
+
+    <div class="scroll-y-box">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, reiciendis saepe officia eius, tempore nihil ratione magnam consequatur ea in aut quia vitae fugit minima suscipit? Repudiandae, possimus. Vitae, repudiandae.
+    </div>
+</body>
+</html>

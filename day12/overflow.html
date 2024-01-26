@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow</title>
+
+    <link rel="stylesheet" href="/reset.css">
+
+    <style>
+        .container {
+            display: flex;
+            padding: 10px;
+            gap: 30px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            box-sizing: border-box;
+        }
+
+        .flow-contents {
+            height: auto;
+        }
+
+        .hidden-contents {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box contents1">
+            <h4>콘텐츠 양이 일정</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus sit explicabo at tenetur a perferendis! Quasi magni assumenda unde culpa cumque ex, obcaecati, ratione fugit quidem enim dolor fuga. Incidunt.</p>
+        </div>
+        <div class="box contents2">
+            <h4>콘텐츠의 양이 많거나 유동적일 때 흘러 넘침</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam dolorem explicabo, earum sunt perspiciatis, velit nisi dolore, sit sint rerum error placeat magni sequi laudantium ullam alias architecto doloribus porro.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi fuga minus, molestiae dolorem, maiores minima assumenda, officiis esse quaerat repellendus deleniti illum et nesciunt quisquam iure quia delectus quas natus.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi fuga minus, molestiae dolorem, maiores minima assumenda, officiis esse quaerat repellendus deleniti illum et nesciunt quisquam iure quia delectus quas natus.</p>
+        </div>
+        <div class="box flow-contents">
+            <h4>콘텐츠 양에 따라서 높이가 늘어남</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi fuga minus, molestiae dolorem, maiores minima assumenda, officiis esse quaerat repellendus deleniti illum et nesciunt quisquam iure quia delectus quas natus.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi fuga minus, molestiae dolorem, maiores minima assumenda, officiis esse quaerat repellendus deleniti illum et nesciunt quisquam iure quia delectus quas natus.</p>
+        </div>
+        <div class="box hidden-contents">
+            <h4>박스에 지정된 높이만큼만 콘텐츠가 보임</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi fuga minus, molestiae dolorem, maiores minima assumenda, officiis esse quaerat repellendus deleniti illum et nesciunt quisquam iure quia delectus quas natus.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi fuga minus, molestiae dolorem, maiores minima assumenda, officiis esse quaerat repellendus deleniti illum et nesciunt quisquam iure quia delectus quas natus.</p>
+        </div>
+    </div>
+ </body>
+</html>

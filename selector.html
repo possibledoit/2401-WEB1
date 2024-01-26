@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector(선택자)</title>
+</head>
+<body>
+    * : 전체 선택자. 별표(aterlisk : 애스터리스크)
+    - 곱하기라는 뜻도 있지만, 선택자 or 이름 적인 관점에서는 '모든 것'을 뜻합니다.
+    우리가 자주하던 * 안에 padding과 margin을 0으로 만드는 작성은 앞으로 작성될
+    모든 태그들한테 다 적용하겠다는 라는 말과 똑같습니다.
+
+    tag 선택자, id 선택자, class 선택자 => 앞에서 배웠음.
+ 
+   <!-- .container.contents는 다음에 적용된다. -->
+   <div class="container contents">여기에 적용</div>
+
+   <!-- .container > .contents는 다음에 적용된다. -->
+   .container > .contents
+   <div class="container">
+        <div class="contents">여기에 적용</div>
+   </div>
+
+   <!-- .container > .contents는 다음에 적용된다. -->
+   .container > .contents
+   <div class="container">
+        <div class="contents">여기엔 적용</div>
+        <div class="inner">
+            <div class="contents">여기엔 적용 안됨</div>
+        </div>
+    </div>
+
+    <!-- .container .container는 다음에 적용된다. -->
+    .container .container
+    <div class="container">
+        <div class="contents">여기에도 적용</div>
+        <div class="inner">
+            <div class="contents">여기에도 적용이 된다.</div>
+        </div>
+    </div>
+
+    <!-- .container, .contents는 다음에 적용된다. -->
+   .container, .contents
+   <div class="container">여기에 적용</div>
+   <div class="contents">여기에 적용</div>
+
+   .container{width:10px}
+   .contents{width:10px}
+
+   위의 아래는 같다
+
+   .container, contents {
+        width:10px;
+   }
+   
+</body>
+</html>
