@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interaction(반응 선택자)</title>
+
+    <link rel="stylesheet" href="/reset.css">
+
+    <style>
+        .my-button {
+            display: inline;
+            padding: 8px 4px;
+            border-radius: 4px;
+            border: 1px solid #777;
+            margin: 12px;
+            
+            background-color: #eee;
+
+            /* 마우스 커서를 바꿔주는 속성 */
+            cursor: pointer;
+        }
+
+        .my-button:hover {
+            background-color: pink;
+        }
+
+        .my-button:active {
+            background-color: palevioletred;
+        }
+
+        .my-button:hover > span {
+            color: red;
+        }
+
+        /* hover는 결론이 아니고 상태이기 때문에 꼭 마지막에 사용하지 않아도 된다. */
+    </style>
+</head>
+<body>
+    <div class="my-button">내가 만든 버튼 <span>특정영역</span></div>
+    <div class="my-button">내가 만든 버튼</div>
+    <div class="my-button">내가 만든 버튼</div>
+    <div class="my-button">내가 만든 버튼</div>
+    <div class="my-button">내가 만든 버튼</div>
+    <div class="my-button">내가 만든 버튼</div>
+</body>
+</html>
