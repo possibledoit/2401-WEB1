@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 요소 선택자</title>
+
+    <style>
+        .link-add-arrow {
+            text-decoration: none;
+            color: #222;
+        }
+
+        .link-add-arrow:hover {
+            text-decoration: underline;
+        }
+
+        .link-add-arrow::after {
+            /* 가상 요소 선택자에서 이 속성은 반드시 필요합니다. */
+            content: "";
+
+            /* before와 after는 inline이 기본 속성이라 모양을 만들때에는 inline-block이나 block을 써줘야 작동한다. */
+            /* after는 클래스가 분리 되었더라도 하나에다가 작성해야 한다. */
+            display: inline-block;
+
+            width: 8px;
+            height: 8px;
+            border: 2px solid #222;
+
+            transform: rotate(-45deg);
+            border-top: none;
+            border-left: none;
+        }
+    </style>
+</head>
+<body>
+    <a class="link-add-arrow" a href="#">Buy now</a>
+
+    <a href="#" class="link-add-arrow">새로만든 구매하기</a>
+</body>
+</html>
