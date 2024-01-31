@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-size</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .example {
+            background-image: url(art.jpg);
+            width: 50%;
+            height: 300px;
+            background-position: center;
+            background-repeat: no-repeat;
+            border: 1px solid #222;
+        }
+
+        .bad {
+            background-size: 100% 100%;
+        }
+
+        .good-cover {
+            background-size: cover;
+        }
+
+        .good-example-contain {
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <h2>잘못된 방법</h2>
+    <div class="bad example"></div>
+    <h2>배경을 전부 채워야할때 Cover</h2>
+    <div class="good-cover example"></div>
+    <h2>이미지를 전부 보여줘야할 때 Contain</h2>
+    <div class="good-contain example"></div>
+</body>
+</html>
