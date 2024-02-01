@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradient</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            /* = grid-template-columns: repeat 200px 200px 200px; */
+
+            gap: 8px;
+
+            /* text는 상속되는 속성이기 때문에 밑에 있는 ul 속성에 text가 다 들어가있다고 생각하면 된다.*/
+            text-align: center;
+        }
+
+        .content {
+            width: 200px;
+            height: 240px;
+            border: 1px solid #777;
+            border-radius: 8px;
+            box-sizing: border-box;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        .color-box {
+            /* 가로세로비 : aspect-ratio */
+            /* 화면비율 1:1로 설정(가로사이즈와 세로사이즈를 연결할 수 있다.) */
+            aspect-ratio: 1;
+        }
+
+        .box1 {
+            background-color: pink;
+        }
+
+        .box2 {
+            /* linear-gradient : 선형 그라디언트 */
+            /* linear-gradient(방향, 색상1, [색상2],...); */
+            /* 방향은 각도(90deg), 방향(to top)등을 사용할 수 있다. */
+            /* 색상은 어느 위치에 고정할 것인지 %로 설정 가능 */
+            /* linear-gradient(90deg, black 30%, white 90%); */
+            background-image: linear-gradient(90deg, black 30%, white 90%);
+        }
+
+        .mylineargradient {
+            background-image: linear-gradient(-45deg, #30cfd0 0%, #330867 100%);;
+        }
+
+        .box3 {
+            /* radial-gradient : 원형 그라디언트 */
+            /* ellipse at center : 기본값 */
+            background-image: radial-gradient(ellipse at center, #AAA, #333);
+        }
+
+        .myradialgrdient {
+            background-image: radial-gradient(ellipse at center, #eea2a2 0%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+        }
+
+        .box4 {
+            background-image: conic-gradient(#000, #fff);
+        }
+
+        .box5 {
+            background-image: conic-gradient(#000 50%, #fff 50%, #fff 70%, #000 50%);
+            border-radius:50%;
+        }
+    </style>
+</head>
+<body>
+    <!-- ul>li.content*9>h2+div.color-box -->
+    <ul>
+        <li class="content">
+            <h2>단색</h2>
+            <div class="color-box box1"></div>
+        </li>
+        <li class="content">
+            <h2>그라디언트1</h2>
+            <div class="color-box box2"></div>
+        </li>
+        <li class="content">
+            <h2>내 선형 <br> 그라디언트</h2>
+            <div class="color-box mylineargradient"></div>
+        </li>
+        <li class="content">
+            <h2>원형 그라디언트</h2>
+            <div class="color-box box3"></div>
+        </li>
+        <li class="content">
+            <h2>내 원형 <br> 그라디언트</h2>
+            <div class="color-box myradialgrdient"></div>
+        </li>
+        <li class="content">
+            <h2>코닉</h2>
+            <div class="color-box box4"></div>
+        </li>
+        <li class="content">
+            <h2>파이 차트</h2>
+            <div class="color-box box5"></div>
+        </li>
+    </ul>
+</body>
+</html>

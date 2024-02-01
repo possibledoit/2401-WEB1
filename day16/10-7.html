@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opacity, alpha</title>
+
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        h2 {
+            width: 300px;
+            height: 300px;
+            font-size: 30px;
+            border: 20px solid black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transition: 1s;
+        }
+
+        .opacity {
+            background-color: #1732ff;
+            opacity: 0.5;
+        }
+
+        .opacity:hover {
+            opacity: 1;
+        }
+
+        .alpha {
+            background-color: rgba(23, 50, 250, 0.5);
+        }
+
+        .alpha:hover {
+            background-color: rgba(23, 50, 250, 1);
+        }
+
+        .text-box {
+            width: 500px;
+            height: 300px;
+            position: absolute;
+            z-index: -100;
+            background-color: pink;
+            border-radius: 20px;
+            top: 150px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="opacity">OPACITY</h2>
+    <h2 class="alpha">ALPHA</h2>
+
+    <div class="text-box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, magnam similique ut, ea accusantium aperiam impedit ipsam necessitatibus esse commodi alias nam exercitationem placeat aliquam minima sequi fugiat molestiae ratione.</div>
+</body>
+</html>
